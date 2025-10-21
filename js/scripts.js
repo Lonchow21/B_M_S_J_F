@@ -127,3 +127,37 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+// ======== VIDEO SLIDER ========
+const slides = document.querySelectorAll(".video-slide");
+const nextBtn = document.querySelector(".video-nav.next");
+const prevBtn = document.querySelector(".video-nav.prev");
+let current = 0;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === index);
+  });
+}
+
+nextBtn.addEventListener("click", () => {
+  current = (current + 1) % slides.length;
+  showSlide(current);
+});
+
+prevBtn.addEventListener("click", () => {
+  current = (current - 1 + slides.length) % slides.length;
+  showSlide(current);
+});
+
+// Cerrar videos anteriores al cambiar
+slides.forEach((slide, i) => {
+  slide.querySelectorAll("video").forEach((v) => {
+    v.addEventListener("play", () => {
+      slides.forEach((s, j) => {
+        if (i !== j) {
+          s.querySelectorAll("video").forEach((vid) => vid.pause());
+        }
+      });
+    });
+  });
+});

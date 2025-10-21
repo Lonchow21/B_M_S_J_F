@@ -168,25 +168,43 @@
 
 <!-- ================= VIDEOS ================= -->
 <section id="videos" class="py-5 bg-glass text-light">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold text-gold section-title">Videos</h2>
-      <p>Revive nuestros mejores momentos</p>
-    </div>
-    <div class="row g-4">
-      <div class="col-md-6">
-        <div class="ratio ratio-16x9">
-          <iframe src="https://www.youtube.com/embed/tu-video-id" allowfullscreen></iframe>
-        </div>
+  <div class="container text-center">
+    <h2 class="fw-bold text-gold section-title mb-3">Videos</h2>
+    <p class="mb-5">Revive nuestros mejores momentos</p>
+
+    <div class="video-slider">
+      <!-- 🎬 Video 1 -->
+      <div class="video-slide active">
+        <video controls class="video-item">
+          <source src="videos/BMSF.mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de video.
+        </video>
       </div>
-      <div class="col-md-6">
-        <div class="ratio ratio-16x9">
-          <iframe src="https://www.youtube.com/embed/otro-video-id" allowfullscreen></iframe>
-        </div>
+
+      <!-- 🎬 Video 2 -->
+      <div class="video-slide">
+        <video controls class="video-item">
+          <source src="videos/MixCumbia.mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de video.
+        </video>
       </div>
+
+      <!-- 🎥 Video 3 (YouTube ejemplo opcional) -->
+      <div class="video-slide">
+        <iframe
+          src="https://www.youtube.com/embed/tu-video-id"
+          allowfullscreen
+          class="video-item">
+        </iframe>
+      </div>
+
+      <!-- 🔁 Botones de navegación -->
+      <button class="video-nav prev">&#10094;</button>
+      <button class="video-nav next">&#10095;</button>
     </div>
   </div>
 </section>
+
 
 <!-- ================= EVENTOS ================= -->
 <section id="eventos" class="py-5 bg-glass text-white">

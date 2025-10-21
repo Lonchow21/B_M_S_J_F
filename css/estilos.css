@@ -558,4 +558,88 @@ footer {
 .historia-box p:last-child {
   margin-bottom: 0;
 }
+.video-container {
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(170, 140, 29, 0.7);
+}
+
+video {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+}
+/* ======== VIDEO SLIDER ======== */
+.video-slider {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.video-slide {
+  display: none;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.video-slide.active {
+  display: block;
+  opacity: 1;
+}
+
+.video-item {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain; /* 👈 adapta sin deformar */
+  border-radius: 10px;
+}
+
+/* ======== Botones de navegación ======== */
+.video-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: gold;
+  border: 1px solid gold;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 2rem;
+  border-radius: 50%;
+  transition: background 0.3s, transform 0.2s;
+  z-index: 10;
+}
+
+.video-nav:hover {
+  background: rgba(255, 215, 0, 0.8);
+  color: #000;
+  transform: scale(1.1);
+}
+
+.video-nav.prev {
+  left: 10px;
+}
+
+.video-nav.next {
+  right: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .video-item {
+    max-height: 50vh;
+  }
+}
 
