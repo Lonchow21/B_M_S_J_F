@@ -72,23 +72,44 @@ document.addEventListener("DOMContentLoaded", function () {
   const navbarToggler = document.querySelector(".navbar-toggler");
   const navLinks = document.querySelectorAll(".navbar-nav a");
 
-  // ✅ Al hacer clic en un enlace, cierra el menú
+  // Función para cerrar el menú si está abierto
+  function cerrarMenu() {
+    if (navbarCollapse.classList.contains("show")) {
+      const collapseInstance = bootstrap.Collapse.getInstance(navbarCollapse);
+      collapseInstance.hide();
+    }
+  }
+
+  // ✅ Cierra el menú al hacer clic en un enlace del navbar
   navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      if (navbarCollapse.classList.contains("show")) {
-        const collapseInstance = bootstrap.Collapse.getInstance(navbarCollapse);
-        collapseInstance.hide();
-      }
-    });
+    link.addEventListener("click", cerrarMenu);
   });
 
-  // ✅ Al volver a tocar el botón hamburguesa, alterna abrir/cerrar
+  // ✅ Alterna abrir/cerrar al tocar el botón hamburguesa
   navbarToggler.addEventListener("click", () => {
     const collapseInstance = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
     if (navbarCollapse.classList.contains("show")) {
-      collapseInstance.hide(); // se cierra si ya está abierto
+      collapseInstance.hide();
     } else {
-      collapseInstance.show(); // se abre si está cerrado
+      collapseInstance.show();
+    }
+  });
+
+  // ✅ Cierra el menú si se hace clic fuera del navbar
+  document.addEventListener("click", (event) => {
+    const isClickInsideNavbar = navbarCollapse.contains(event.target) || navbarToggler.contains(event.target);
+    if (!isClickInsideNavbar) {
+      cerrarMenu();
+    }
+  });
+
+  // ✅ Efecto al hacer scroll: navbar cambia de color
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".luxury-nav");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
     }
   });
 
@@ -106,5 +127,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-
