@@ -66,3 +66,45 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Cierra el menú hamburguesa al hacer clic en un enlace
+document.addEventListener("DOMContentLoaded", function () {
+  const navbarCollapse = document.querySelector(".navbar-collapse");
+  const navbarToggler = document.querySelector(".navbar-toggler");
+  const navLinks = document.querySelectorAll(".navbar-nav a");
+
+  // ✅ Al hacer clic en un enlace, cierra el menú
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      if (navbarCollapse.classList.contains("show")) {
+        const collapseInstance = bootstrap.Collapse.getInstance(navbarCollapse);
+        collapseInstance.hide();
+      }
+    });
+  });
+
+  // ✅ Al volver a tocar el botón hamburguesa, alterna abrir/cerrar
+  navbarToggler.addEventListener("click", () => {
+    const collapseInstance = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+    if (navbarCollapse.classList.contains("show")) {
+      collapseInstance.hide(); // se cierra si ya está abierto
+    } else {
+      collapseInstance.show(); // se abre si está cerrado
+    }
+  });
+
+  // ✅ Scroll suave al hacer clic en enlaces internos
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        e.preventDefault();
+        window.scrollTo({
+          top: target.offsetTop - 70,
+          behavior: "smooth",
+        });
+      }
+    });
+  });
+});
+
+
