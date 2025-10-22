@@ -161,3 +161,14 @@ slides.forEach((slide, i) => {
     });
   });
 });
+// 🔁 Recargar la página al hacer clic en el logo del navbar
+document.addEventListener("DOMContentLoaded", function () {
+  const logoNav = document.querySelector(".navbar-brand");
+
+  if (logoNav) {
+    logoNav.addEventListener("click", function (event) {
+      event.preventDefault(); // evita el desplazamiento a #hero
+      location.reload(); // recarga la página
+    });
+  }
+});
