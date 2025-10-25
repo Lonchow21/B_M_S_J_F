@@ -1196,4 +1196,68 @@ body, h1, h2, h3, h4, h5, h6, p, span, button {
   text-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
   letter-spacing: 1px;
 }
+/* ====== DONACIONES ====== */
+#donaciones {
+  background-color: #1a1a1a;
+}
+
+.text-gold {
+  color: #d4af37 !important;
+}
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+}
+
+.donacion-card {
+  background-color: #222;
+  border: 2px solid #d4af37;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Efecto dorado en hover */
+.donacion-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  background: linear-gradient(45deg, #d4af37, #f5e49a, #d4af37);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.3s ease;
+  z-index: -1;
+}
+
+.donacion-card:hover::before {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+.donacion-card:hover {
+  transform: scale(1.03);
+  background-color: #111;
+  border-color: #f1c84c;
+}
+
+.donacion-card h4 {
+  color: #f1c84c;
+  text-shadow: 0 0 6px rgba(255, 230, 140, 0.5);
+}
+
+.donacion-card p {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.donacion-card strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
 
