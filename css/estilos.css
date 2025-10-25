@@ -43,7 +43,7 @@ html, body {
   letter-spacing: 2px;
 }
 
-/* ✨ NUEVO: estilo del texto "BMSJF" en navbar */
+/*  NUEVO: estilo del texto "BMSJF" en navbar */
 .navbar-logo-text {
   font-family: 'Cinzel', serif;       /* Mismo estilo que hero-title */
   font-size: 1.8rem;
@@ -533,7 +533,7 @@ video {
 .video-item {
   width: 100%;
   height: 65vh;
-  object-fit: contain; /* ✅ se adapta sin cortar */
+  object-fit: contain; 
   background: #000;
   border-radius: 12px;
 }
@@ -706,7 +706,7 @@ video {
 .integrantes-seccion {
   margin-bottom: 5rem;
   position: relative;
-  overflow: visible; /* 🔥 evita que se recorten sombras */
+  overflow: visible; /* evita que se recorten sombras */
 }
 
 /* ======= TARJETAS DE INTEGRANTES ======= */
@@ -717,7 +717,7 @@ video {
   max-width: 320px;
   margin: 0 auto;
   text-align: center;
-  overflow: visible; /* 🔥 permite ver el brillo completo */
+  overflow: visible; /* permite ver el brillo completo */
   box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

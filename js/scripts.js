@@ -190,7 +190,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e){
   const tieneInstrumento = document.getElementById('tieneInstrumento').value;
   const mensaje = document.getElementById('mensaje').value.trim();
 
-  const whatsappNumber = '50683893687'; // Cambia por el número de la banda (sin + ni 0)
+  const whatsappNumber = '50683893687'; 
   const text = `Hola, quiero unirme a la Banda Melorítmica San Joaquín de Flores%0A%0ANombre: ${encodeURIComponent(nombre)}%0AEdad: ${encodeURIComponent(edad)}%0AInstrumento: ${encodeURIComponent(instrumento)}%0ATiene instrumento propio: ${encodeURIComponent(tieneInstrumento)}%0AMensaje: ${encodeURIComponent(mensaje)}`;
 
   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${text}`;
