@@ -796,7 +796,16 @@
       }
     }, 500);
   });
-  
+   document.addEventListener("DOMContentLoaded", function () {
+    const navbarCollapse = document.getElementById("navbarNav");
+    const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+
+    window.addEventListener("scroll", function () {
+      if (navbarCollapse.classList.contains("show")) {
+        bsCollapse.hide();
+      }
+    });
+  });
 </script>
 </body>
 </html>

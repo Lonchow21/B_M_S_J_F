@@ -196,3 +196,10 @@ document.getElementById('contact-form').addEventListener('submit', function(e){
   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${text}`;
   window.open(whatsappURL, '_blank');
 });
+document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    if (navbarCollapse.classList.contains('show')) {
+      navbarToggler.click();
+    }
+  });
+});
