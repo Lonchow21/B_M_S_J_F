@@ -13,7 +13,7 @@ body {
 }
 
 html, body {
-  overflow-x: hidden;  /* ✅ evita barras laterales */
+  overflow-x: hidden;  /* evita barras laterales */
 }
 
 .text-gold {
@@ -21,7 +21,7 @@ html, body {
 }
 
 #hero {
-  overflow: hidden; /* ✅ evita scroll vertical innecesario */
+  overflow: hidden; /* evita scroll vertical innecesario */
 }
 
 .hero-section .overlay {
@@ -318,7 +318,7 @@ html, body {
 
 /* ================= HERO ================= */
 .hero-section {
-  background: url('../img/Iglesia.jpg') center center/cover no-repeat;
+  background: url('../img/Galeria/Iglesia.jpg') center center/cover no-repeat;
   position: relative;
   height: 100vh;
 }
@@ -436,76 +436,6 @@ html, body {
   .navbar-nav .nav-link {
     text-align: center;
     font-size: 1.1rem;
-  }
-}
-/* ================= REDES SOCIALES ================= */
-#redes {
-  background-color: var(--verde);
-  text-align: center;
-  padding: 5rem 0;
-}
-
-#redes p {
-  color: #ddd;
-  font-size: 1.1rem;
-}
-
-/* Íconos de redes sociales */
-.social-link {
-  font-size: 3rem; /* Tamaño grande */
-  margin: 0 1rem;
-  transition: transform 0.3s ease, filter 0.3s ease;
-  display: inline-block;
-}
-
-.social-link:hover {
-  transform: scale(1.2);
-  filter: brightness(1.3);
-}
-
-/* Colores oficiales */
-.social-link.facebook {
-  color: #1877F2; /* Azul Facebook */
-}
-
-.social-link.instagram {
-  background: radial-gradient(circle at 30% 107%, 
-    #fdf497 0%, 
-    #fdf497 5%, 
-    #fd5949 45%, 
-    #d6249f 60%, 
-    #285AEB 90%);
-  -webkit-background-clip: text;
-  background-clip: text;           /* 👈 estándar */
-  -webkit-text-fill-color: transparent;
-  color: transparent;              /* 👈 fallback */
-}
-
-.social-link.tiktok {
-  background: linear-gradient(45deg, #25F4EE, #FE2C55);
-  -webkit-background-clip: text;
-  background-clip: text;           /* 👈 estándar */
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
-
-.social-link.tiktok {
-  background: linear-gradient(45deg, #25F4EE, #FE2C55);
-  -webkit-background-clip: text;  /* Para navegadores WebKit (Chrome, Safari) */
-  background-clip: text;          /* 👈 Versión estándar recomendada */
-  -webkit-text-fill-color: transparent;
-  color: transparent;            /* 👈 Fallback si no soporta text-fill-color */
-}
-
-.social-link.whatsapp {
-  color: #25D366; /* Verde WhatsApp */
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .social-link {
-    font-size: 2.5rem;
-    margin: 0.5rem;
   }
 }
 
@@ -676,5 +606,594 @@ video {
   .video-item {
     max-height: 50vh;
   }
+}
+.carousel-indicators {
+  display: none !important;
+}
+
+/* Navbar general */
+.navbar {
+  padding: 0.6rem 1rem;
+  height: 85px;
+  display: flex;
+  align-items: center;
+}
+
+/* Logo circular */
+.navbar-brand img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid gold;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+/* Alineación del contenido en el navbar */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espacio entre logo y texto */
+}
+
+/* Texto del nombre en el navbar */
+.navbar-brand span,
+.navbar-brand strong {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* --- Ajuste para móviles --- */
+@media (max-width: 768px) {
+  .navbar {
+    height: 80px;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centra logo y texto horizontalmente */
+    width: 100%;
+  }
+
+  .navbar-brand img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .navbar-brand span,
+  .navbar-brand strong {
+    font-size: 1rem;
+  }
+
+  /* Centrar mejor el botón hamburguesa */
+  .navbar-toggler {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+/* ======= SECCIÓN INTEGRANTES ======= */
+#integrantes {
+  font-family: 'Poppins', sans-serif;
+  background-color: #212529;
+  color: #fff;
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-family: 'Cinzel', serif !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #d4af37 !important; /* dorado */
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+  margin-bottom: 3rem;
+}
+
+/* ======= SUBTÍTULOS ======= */
+.section-subtitle {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #d4af37;
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+  margin-bottom: 2rem;
+}
+
+.integrantes-seccion {
+  margin-bottom: 5rem;
+  position: relative;
+  overflow: visible; /* 🔥 evita que se recorten sombras */
+}
+
+/* ======= TARJETAS DE INTEGRANTES ======= */
+.integrante-card {
+  background-color: #2c2f33;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 320px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: visible; /* 🔥 permite ver el brillo completo */
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.integrante-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.45);
+}
+
+/* ======= IMÁGENES ======= */
+.integrante-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  border: 3px solid #d4af37;
+  background-color: #212529;
+  padding: 4px;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+  transition: all 0.4s ease;
+}
+
+.integrante-card:hover img {
+  transform: scale(1.04);
+  border-color: #ffcc33;
+  box-shadow: 0 0 35px rgba(212, 175, 55, 0.6);
+}
+
+/* ======= TEXTO ======= */
+.integrante-card h5 {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  color: #d4af37;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+  transition: text-shadow 0.3s ease;
+}
+
+.integrante-card:hover h5 {
+  text-shadow: 0 0 12px rgba(255, 204, 51, 0.8);
+}
+
+.integrante-card p {
+  font-family: 'Poppins', sans-serif;
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+/* ======= CONTROLES DEL CARRUSEL ======= */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #d4af37;
+  border-radius: 50%;
+  padding: 12px;
+  filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.6));
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+/* Asegura que el brillo no se corte */
+.carousel-inner {
+  overflow: visible;
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+  .integrante-card {
+    max-width: 240px;
+  }
+  .integrante-card img {
+    height: auto;
+  }
+  .section-subtitle {
+    font-size: 1.4rem;
+  }
+}
+/* ======= GALERÍA ======= */
+#fotos {
+  background: linear-gradient(135deg, #0b2a08 0%, #212529 50%, #0b2a08 100%);
+}
+
+.gallery-frame {
+  position: relative;
+  background: #212529;
+  border: 3px solid #d4af37; /* dorado */
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  height: 400px; /* ✅ Permite espacio suficiente para verticales */
+}
+
+/* ✅ Ajuste clave: mantener proporción sin recortar */
+.gallery-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* ✅ cambia de cover a contain */
+  transition: transform 0.4s ease;
+  border-radius: 18px;
+}
+
+/* ✅ Hover mejorado: mantiene borde completo */
+.gallery-frame:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.5);
+  border-color: #ffcc33;
+}
+
+.gallery-frame:hover img {
+  transform: scale(1.05);
+}
+
+/* Controles exclusivos de galería */
+#fotos .carousel-control-prev-icon,
+#fotos .carousel-control-next-icon {
+  background-color: rgba(212, 175, 55, 0.9);
+  border-radius: 50%;
+  padding: 12px;
+  filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
+  transition: all 0.3s ease;
+}
+
+#fotos .carousel-control-prev-icon:hover,
+#fotos .carousel-control-next-icon:hover {
+  background-color: #ffcc33;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .gallery-frame { height: 320px; }
+}
+
+@media (max-width: 768px) {
+  .gallery-frame { height: 280px; }
+}
+
+@media (max-width: 576px) {
+  .gallery-frame { height: 240px; }
+}
+/* ======= Fondo gris translúcido uniforme ======= */
+
+/* Sección Galería */
+#fotos {
+  background: linear-gradient(135deg, rgba(33, 37, 41, 0.95), rgba(20, 22, 25, 0.95));
+  color: #f8f9fa; /* texto claro sobre fondo oscuro */
+}
+
+/* Sección Integrantes */
+#integrantes {
+  background: linear-gradient(135deg, rgba(33, 37, 41, 0.95), rgba(20, 22, 25, 0.95));
+  color: #f8f9fa;
+}
+
+/* Sección Redes Sociales */
+#redes {
+  background: linear-gradient(135deg, #051804, rgba(20, 22, 25, 0.95));
+  color: #f8f9fa;
+}
+
+/* Títulos en dorado coherentes */
+#fotos h2, #integrantes h2, #redes h2,
+#fotos h3, #integrantes h3, #redes h3 {
+  color: #d4af37;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+/* ======== ESTILO DE TIPOGRAFÍA GLOBAL ======== */
+body, h1, h2, h3, h4, h5, h6, p, span, button {
+  font-family: "Cinzel", serif; /* misma tipografía elegante */
+  letter-spacing: 0.5px;
+}
+
+/* ======== TÍTULOS GENERALES ======== */
+.section-title, 
+#integrantes h2, 
+#integrantes h3, 
+#fotos h2, 
+#redes h2 {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #d4af37; /* dorado elegante */
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+  letter-spacing: 1px;
+}
+
+/* ======== NOMBRES DE INTEGRANTES ======== */
+.integrante-nombre {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  color: #d4af37;
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+/* ======== INSTRUMENTO / DESCRIPCIÓN ======== */
+.integrante-instrumento {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #f8f9fa;
+  opacity: 0.85;
+  font-size: 1rem;
+}
+
+/* ======== TÍTULOS DE SECCIONES (Percusión, Vientos, etc.) ======== */
+.integrantes-seccion-titulo {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #d4af37;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+/* ======== DESCRIPCIÓN DEL DIRECTOR ======== */
+.director-info {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: #f8f9fa;
+  opacity: 0.9;
+  text-align: center;
+  margin-top: 10px;
+}
+/* Evita que los controles del carrusel aparezcan fuera de sus secciones */
+#hero .carousel-control-prev,
+#hero .carousel-control-next {
+  display: none !important;
+}
+/* -------------- FORZAR ocultar flechas si por error están en el hero -------------- */
+/* selector muy específico y con !important por si algo lo está sobrescribiendo */
+header#hero .carousel-control-prev,
+header#hero .carousel-control-next,
+header#hero .carousel-control-prev-icon,
+header#hero .carousel-control-next-icon {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Asegurar que hero no deje que elementos absolutos se posicionen encima desde afuera */
+header#hero {
+  position: relative; /* ya lo tienes, pero forzamos para evitar que el control use otro offset */
+  z-index: 9999;      /* poner arriba para que nada flote encima por error */
+}
+nav.navbar {
+  z-index: 10000 !important;
+}
+html {
+  scroll-behavior: smooth;
+}
+#contacto .glass-card {
+  background: rgba(33, 37, 41, 0.95); /* gris translúcido igual que tu web */
+  border: 2px solid #d4af37; /* borde dorado */
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+#contacto p {
+  font-family: 'Poppins', sans-serif;
+  color: #f8f9fa;
+}
+
+#contacto h5 {
+  font-family: 'Cinzel', serif;
+  color: #d4af37;
+  margin-bottom: 0.5rem;
+}
+#contacto .map-container iframe {
+  border: 2px solid #d4af37; /* borde dorado */
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contacto .map-container iframe:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+}
+/* ======== INSCRIPCIONES ======== */
+#inscripciones {
+  background-color: #191c1f; /* gris principal */
+  color: #000000;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 0; /* evita franja entre secciones */
+}
+
+#inscripciones .glass-card {
+  background: rgba(25, 28, 31, 0.9);
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#inscripciones .glass-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+}
+
+#inscripciones h2,
+#inscripciones h5,
+#inscripciones label {
+  font-family: "Cinzel", serif;
+  color: #d4af37;
+}
+
+/* === campos de formulario === */
+#inscripciones input,
+#inscripciones textarea,
+#inscripciones select {
+  background-color: #f7f7f7; /* fondo claro */
+  color: #000;               /* texto negro */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+/* efecto al enfocar */
+#inscripciones input:focus,
+#inscripciones textarea:focus,
+#inscripciones select:focus {
+  outline: none;
+  border: 1px solid #d4af37;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+/* === botón dorado === */
+#inscripciones .btn-gold {
+  background-color: #d4af37;
+  color: #212529;
+  font-weight: bold;
+  border-radius: 30px;
+  border: none;
+  transition: 0.3s;
+}
+
+#inscripciones .btn-gold:hover {
+  background-color: #f8d86e;
+  color: #000;
+}
+
+/* === mapa === */
+#inscripciones .map-container iframe {
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#inscripciones .map-container iframe:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+}
+
+
+/* ===================== REDES SOCIALES ===================== */
+#redes {
+  background: linear-gradient(135deg, #051804, rgba(20, 22, 25, 0.95));
+  color: #f8f9fa;
+  padding: 80px 0;
+  text-align: center;
+  margin-top: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Animación de entrada */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Título */
+#redes h2 {
+  font-family: "Cinzel", serif;
+  color: #d4af37;
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+  font-weight: 700;
+  font-size: 2.5rem;
+  animation: fadeSlideUp 1s ease forwards;
+  margin-bottom: 1rem;
+}
+
+/* Descripción */
+#redes p {
+  font-family: "Poppins", sans-serif;
+  color: #f8f9fa;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeSlideUp 1s ease 0.3s forwards;
+}
+
+/* Íconos de redes sociales */
+.social-link {
+  font-size: 3rem;
+  margin: 0 1rem;
+  display: inline-block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  opacity: 0;
+  animation: fadeSlideUp 1s ease 0.6s forwards;
+}
+
+/* Hover en íconos */
+.social-link:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+}
+
+/* ====== COLORES OFICIALES ====== */
+
+/* Facebook */
+.social-link.facebook {
+  color: #1877F2;
+}
+
+/* Instagram - color sólido similar a su degradado */
+.social-link.instagram {
+  color: #E1306C; /* Rosa Instagram */
+}
+
+/* TikTok */
+.social-link.tiktok {
+  color: #25F4EE; /* Cian TikTok */
+}
+
+/* WhatsApp */
+.social-link.whatsapp {
+  color: #25D366;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .social-link {
+    font-size: 2.5rem;
+    margin: 0.5rem;
+  }
+}
+
+/* ====== TIPOGRAFÍA GLOBAL ====== */
+body, h1, h2, h3, h4, h5, h6, p, span, button {
+  font-family: "Cinzel", serif;
+  letter-spacing: 0.5px;
+}
+
+/* ====== TÍTULOS GENERALES ====== */
+.section-title,
+#integrantes h2,
+#integrantes h3,
+#fotos h2,
+#redes h2 {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #d4af37;
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+  letter-spacing: 1px;
 }
 
