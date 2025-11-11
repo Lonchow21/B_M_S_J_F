@@ -1260,4 +1260,74 @@ body, h1, h2, h3, h4, h5, h6, p, span, button {
   font-weight: 600;
 }
 
+/* ================= NAVBAR LUXURY ================= */
+.luxury-nav {
+  background: rgba(25, 28, 31, 0.65);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.luxury-nav.scrolled {
+  background: rgba(25, 28, 31, 0.9);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.25);
+}
+
+/* Logo */
+.logo-nav {
+  width: 45px;
+  height: 45px;
+}
+
+.navbar-logo-text {
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.text-gold {
+  color: #d4af37 !important;
+}
+
+/* Links */
+.navbar-nav .nav-link {
+  font-family: 'Cinzel', serif;
+  color: #f8f9fa !important;
+  margin: 5px 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #d4af37 !important;
+  transform: scale(1.05);
+}
+
+/* === Móvil: menú hamburguesa con fondo borroso === */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background: rgba(25, 28, 31, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 20px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.1rem;
+    margin: 10px 0;
+  }
+}
+
+/* === Animación de aparición === */
+.navbar {
+  animation: fadeDown 0.6s ease-in-out;
+}
+
+@keyframes fadeDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
 
