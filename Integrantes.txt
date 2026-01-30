@@ -1,0 +1,167 @@
+<!-- ================= INTEGRANTES ================= -->
+<section id="integrantes" class="py-5 text-light">
+  <div class="container text-center">
+    <h2 class="fw-bold text-gold section-title mb-5">Integrantes</h2>
+
+    <!-- ==== PERCUSIÓN LATINA ==== -->
+    <div class="integrantes-seccion">
+      <h3 class="fw-bold text-gold section-subtitle mb-4">Percusión Latina</h3>
+      <div id="carouselPercusionLatina" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+          <div class="carousel-item active"><div class="integrante-card"><img src="img/Integrantes/Alonso.png" alt="Alonso"><h5>Alonso</h5><p>Timbales</p></div></div>
+          <!-- <div class="carousel-item"><div class="integrante-card"><img src="img/Integrantes/jonathan.jpg" alt="Jonathan"><h5>Jonathan</h5><p>Congas</p></div></div>
+          <div class="carousel-item"><div class="integrante-card"><img src="img/Integrantes/kendal.jpg" alt="Kendal"><h5>Kendal</h5><p>Congas</p></div></div>
+          <div class="carousel-item"><div class="integrante-card"><img src="img/Integrantes/oscar.jpg" alt="Oscar"><h5>Oscar</h5><p>Congas</p></div></div>-->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPercusionLatina" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselPercusionLatina" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+      </div>
+    </div>
+
+    <!-- ==== VIENTOS ==== -->
+    <div class="integrantes-seccion">
+      <h3 class="fw-bold text-gold section-subtitle mb-4">Vientos</h3>
+      <div id="carouselVientos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+          <div class="carousel-item active"><div class="integrante-card"><img src="img/Integrantes/Sebastian.png"><h5>Sebastian</h5><p>Saxofon</p></div></div>
+          <div class="carousel-item"><div class="integrante-card"><img src="img/Integrantes/Adrian.png"><h5>Adrian</h5><p>Saxofón</p></div></div>-->
+          <div class="carousel-item"><div class="integrante-card"><img src="img/Integrantes/Marcela.png"><h5>Marcela</h5><p>Clarinete</p></div></div>
+          <!--<div class="carousel-item"><div class="integrante-card"><img src="img/Integrantes/"><h5>Bryan</h5><p>Trombón</p></div></div>
+          <div class="carousel-item"><div class="integrante-card"><img src="img/Integrantes/josuegamez.jpg"><h5>Josue Gamez</h5><p>Trombón</p></div></div>
+          <div class="carousel-item"><div class="integrante-card"><img src="img/Integrantes/elias.jpg"><h5>Elias</h5><p>Barítono</p></div></div>-->
+          <div class="carousel-item"><div class="integrante-card"><img src="img/Integrantes/Jose.png"><h5>Jose</h5><p>Trompeta</p></div></div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselVientos" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselVientos" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+      </div>
+    </div>
+
+    <!-- ==== CAJAS ==== -->
+    <div class="integrantes-seccion">
+      <h3 class="fw-bold text-gold section-subtitle mb-4">Cajas</h3>
+      <div id="carouselPercusion" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+          <div class="carousel-item active"><div class="integrante-card"><img src="img/Integrantes/Allan.png"><h5>Allan</h5><p>Caja</p></div></div>
+          <!--<div class="carousel-item"><div class="integrante-card"><img src="img/Integrantes/jozef.jpg"><h5>Jozef</h5><p>Caja</p></div></div>-->
+          <div class="carousel-item"><div class="integrante-card"><img src="img/Integrantes/Iker.png"><h5>Iker</h5><p>Caja</p></div></div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPercusion" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselPercusion" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+      </div>
+    </div>
+
+    <!-- ==== GUIROS ==== -->
+<div class="integrantes-seccion">
+  <h3 class="fw-bold text-gold section-subtitle mb-4">Guiros</h3>
+  <div id="carouselGuiros" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="integrante-card">
+          <img src="img/Integrantes/Fabi.png">
+          <h5>Fabiola</h5>
+          <p>Güiro</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="integrante-card">
+          <img src="img/Integrantes/Sarita.png">
+          <h5>Sarita</h5>
+          <p>Güiro</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="integrante-card">
+          <img src="img/Integrantes/Tiffany.png">
+          <h5>Tiffany</h5>
+          <p>Güiro</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="integrante-card">
+          <img src="img/Integrantes/Samara.png">
+          <h5>Samara</h5>
+          <p>Güiro</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="integrante-card">
+          <img src="img/Integrantes/Monse.png">
+          <h5>Monse</h5>
+          <p>Güiro</p>
+        </div>
+      </div>
+       <!--<div class="carousel-item">
+        <div class="integrante-card">
+          <img src="img/Integrantes/sara.jpg">
+          <h5>Sara</h5>
+          <p>Güiro</p>
+        </div>
+      </div>-->
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselGuiros" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselGuiros" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</div>
+
+    <!-- ==== LIRAS ==== -->
+    <div class="integrantes-seccion">
+      <h3 class="fw-bold text-gold section-subtitle mb-4">Liras</h3>
+      <div id="carouselLiras" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+          <div class="carousel-item active"><div class="integrante-card"><img src="img/Integrantes/Paola.png"><h5>Paola</h5><p>Lira</p></div></div>
+          <div class="carousel-item"><div class="integrante-card"><img src="img/Integrantes/Kata.png"><h5>Kata</h5><p>Lira</p></div></div>
+          <div class="carousel-item"><div class="integrante-card"><img src="img/Integrantes/Jeanca.png"><h5>Jeanca</h5><p>Lira</p></div></div>
+          <div class="carousel-item"><div class="integrante-card"><img src="img/Integrantes/Madeline.png"><h5>Madeline</h5><p>Lira</p></div></div>
+          <div class="carousel-item"><div class="integrante-card"><img src="img/Integrantes/geannina.png"><h5>Geannina</h5><p>Lira</p></div></div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselLiras" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselLiras" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+      </div>
+    </div>
+
+     <!-- ==== Xilófono ==== -->
+    <div class="integrantes-seccion">
+      <h3 class="fw-bold text-gold section-subtitle mb-4">Xilófono</h3>
+      <div id="carouselXilofonos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+          <div class="carousel-item active"><div class="integrante-card"><img src="img/Integrantes/beto.png"><h5>Beto</h5><p>Xilófono</p></div></div>
+          <div class="carousel-item"><div class="integrante-card"><img src="img/Integrantes/susan.png"><h5>Susan</h5><p>Xilófono</p></div></div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselXilofonos" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselXilofonos" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+      </div>
+    </div>
+
+    <!-- ==== BOMBOS ==== -->
+    <div class="integrantes-seccion">
+      <h3 class="fw-bold text-gold section-subtitle mb-4">Bombos</h3>
+      <div id="carouselBombos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+          <div class="carousel-item active"><div class="integrante-card"><img src="img/Integrantes/Jimmy.png"><h5>Jimmy</h5><p>Bombo</p></div></div>
+          <div class="carousel-item"><div class="integrante-card"><img src="img/Integrantes/Mariano.png"><h5>Mariano</h5><p>Bombo</p></div></div>
+          <!--<div class="carousel-item"><div class="integrante-card"><img src="img/Integrantes/josue.jpg"><h5>Josue</h5><p>Bombo</p></div></div>
+          <div class="carousel-item"><div class="integrante-card"><img src="img/Integrantes/gabo.jpg"><h5>Gabo</h5><p>Bombo</p></div></div>
+          <div class="carousel-item"><div class="integrante-card"><img src="img/Integrantes/naz.jpg"><h5>Naz</h5><p>Bombo</p></div></div>-->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBombos" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselBombos" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+      </div>
+    </div>
+  </div>
+  <!-- DIRECTOR -->
+    <div class="integrantes-seccion mt-5">
+      <h2 class="integrantes-seccion-titulo">Director</h2>
+      <div class="integrante-card mx-auto" style="max-width: 300px;">
+        <img src="img/Integrantes/" alt="Ricardo Salas" class="img-fluid rounded-4" style="width: 100%; object-fit: cover; border: 3px solid #d4af37;">
+        <h5 class="integrante-nombre mt-3">Ricardo Salas</h5>
+        <p class="integrante-instrumento">Percusionista & Director General</p>
+        <p class="director-info">Apasionado por la música y el liderazgo, Ricardo ha guiado a la banda con dedicación y excelencia, inspirando a cada integrante a dar lo mejor de sí en cada presentación.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
